@@ -1,22 +1,56 @@
-let number=prompt("Ingrese el valor que falta en la sucesion : 1, 2, 3, 5,__, 13");
+let zodiac=(prompt("Ingresa tu signo del horoscopo para saber que elemento sos")).toLowerCase();
 let flag=true;
 
-if(number.toLowerCase()=='ocho'||parseInt(number)==8){
-   alert("felicitaciones te ganaste un 0km, pasa a buscarlo en av.siempre viva 742");
-   flag=false;
-}else{
-    alert("no ganaste, el numero faltante era 8");
-    number=prompt("para volver a intenarlo ingresa 1 o 0 para salir");
-}
-//segunda oportunidad, solo se activa si se ingresa una respuesta incorrecta en el primer intento.
-if(flag&&number==1){
-    number=parseInt(prompt("Ingrese el numero que falta en la sucesion :  13,21,__,55"));
-    if(number==34){
-        alert("felicitaciones,avanzas al siguiente escalon");
+while(flag==true){
+    switch(zodiac){
+        case 'aries':
+            alert('tu elemento es fuego');
+        break;
+        case 'leo':
+            alert('tu elemento es fuego');
+        break;
+        case 'sagitario':
+            alert('tu elemento es fuego');
+        break;
+        case 'tauro':
+            alert('tu elemento es tierra');
+        break;
+        case 'virgo':
+            alert('tu elemento es tierra');
+        break;
+        case 'capricornio':
+            alert('tu elemento es tierra');
+        break; 
+        case 'geminis':
+            alert('tu elemento es aire');
+        break;
+        case 'libra':
+            alert('tu elemento es aire');
+        break;
+        case 'acuario':
+            alert('tu elemento es aire');
+        break;
+        case 'cancer':
+            alert('tu elemento es agua');
+        break;
+        case 'escorpio':
+            alert('tu elemento es agua');
+        break;
+        case 'piscis':
+            alert('tu elemento es agua');
+        break;
+        default: 
+        alert('el signo ingresado no existe');
     }
-    else{
-        alert("el numero faltante era 34,mejor suerte para la proxima");
+     zodiac=prompt('Ingresa un nuevo signo o 1 para salir');
+    if(zodiac!=1){
+        flag=true;
+    }else{
+        flag=false;
     }
-}else{
-    flag=false;
+    
 }
+
+
+
+
